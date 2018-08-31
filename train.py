@@ -152,8 +152,8 @@ def test(val_loader, train_loader, model, epoch, decoder=None):
                 pbar.set_postfix(loss=all_loss_meter.value()[0], accuracy=accuracy_meter.value()[0])
                 pbar.update()
 
-                # if args.remake and i % args.remake_log_interval == 0:
-                #     log_reconstruction(remake, data, niter, epoch - 1)
+                if args.remake and i % args.remake_log_interval == 0:
+                    log_reconstruction(remake, data, niter, epoch - 1)
 
     top1, top5 = accuracy_meter.value()
     if not args.evaluate:

@@ -15,15 +15,13 @@ from dynamic_capsules import DynamicCapsules
 from em_capsules import em_standard, em_small, em_one
 from loss import SpreadLoss, MarginLoss, CrossEntropyLoss
 from spectral_capsules import spectral_capsules
-from densenet import DenseNet121
 
 # Available models
 model_dict = {'dynamic': DynamicCapsules,
               'em-standard': em_standard,
               'em-small': em_small,
               'em-one': em_one,
-              'spectral': spectral_capsules,
-              'dense': DenseNet121}
+              'spectral': spectral_capsules}
 
 # Available loss functions
 loss_functions = {'spread': SpreadLoss,
